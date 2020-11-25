@@ -8,6 +8,7 @@ Vue.use(Router)
 export default () => {
   return new Router({
     mode: 'history',
+    base: '/client/',
     routes: [
       {
         path: '/',

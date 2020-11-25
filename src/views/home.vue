@@ -27,6 +27,9 @@
         show: false
       }
     },
+    beforeMount() {
+      console.log(this.$route.path)
+    },
     methods: {
       showPopup() {
         this.show = true;

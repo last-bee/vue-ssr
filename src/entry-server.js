@@ -3,10 +3,10 @@ console.log('----createApp----')
 
 import createApp from './create-app'
 
-console.log('----createApp----')
 export default context => {
   return new Promise((resolve, inject) => {
     const { app, router } = createApp()
+    console.log('----router----', router)
 
     router.push(context.url)
 

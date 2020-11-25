@@ -3,14 +3,14 @@ const VueSSRClientPlugin = require('vue-server-renderer/client-plugin')
 
 const TARGET_NODE= process.env.WEBPACK_TARGET === 'node'
 const target = TARGET_NODE? 'server': 'client'
-// const prodEnv = process.env.NODE_ENV === 'production'
+const prodEnv = process.env.NODE_ENV === 'production'
 // console.log(process.env)
 // console.log(process.env.WEBPACK_TARGET, target)
 module.exports = {
   css: {
     extract: false
   },
-  outputDir: './dist/' + target,
+  outputDir: target,
   assetsDir:  TARGET_NODE? '': 'resource',
   productionSourceMap: false,
   configureWebpack: () => ({
